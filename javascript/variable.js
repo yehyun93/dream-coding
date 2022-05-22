@@ -4,7 +4,7 @@
 // 비상식적인거 사용 안됨
 'use strict';
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 // let (added in ES6)
 // 글로벌 함수는 어플리케이션이 끝날때까지 항상 메모리에 탑재되어 있기 때문에 최소한으로 사용
 let globalName = 'global name';
@@ -29,18 +29,25 @@ console.log(globalName);
 }
 console.log(age);
 
-// 3. Constants
+// 3. Constant, r(read only)
+// use const whenever possible
+// only use let if variable needs to change.
 // 할당한 뒤로는 값 변경 불가
+
+const daysInWeek = 7;
+const maxNumber = 5;
+
+// Note!
+// Immutable data types: premitive types, frozen objects (i.e. object.freeze())
+// Mutable data types: all bojects by default are mutable in JS
 // favor immutable data type always for a few reasons:
 //  - security
 //  - thread safety
 //  - reduce human mistakes
-const daysInWeek = 7;
-const maxNumber = 5;
 
 // 4. Variable types
 // primitive, single item: number, string, boolean, null, undefind, symbol
-// object, box container
+// object(ref가 메모리에 저장 -> object를 담고 있는 곳을 가리킴), box container
 // function, first-class function -> 변수에 할당이 가능, 함수의 인자, 리턴타입으로도 가능
 // number -> 자바스크립트는 이것만 쓰면 됨 (심지어 선언도 안해도 됨, 다이나믹)
 const count = 17;
