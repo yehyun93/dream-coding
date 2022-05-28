@@ -51,6 +51,7 @@ class UserStorage {
 const userStorage = new UserStorage();
 const id = prompt('enter your id');
 const password = prompt('enter your pwd');
+
 userStorage.loginUser(id, password, 
   (user) => {
     userStorage.getRoles(
