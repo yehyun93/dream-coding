@@ -1,7 +1,6 @@
 {
   "name": "6-express",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -16,5 +15,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
-  }
+  },
+  "description": ""
 }
